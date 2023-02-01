@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Task</title>
+    <meta name="description" content="">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+
+    
+
+       <style>
+      html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'Aclonica', sans-serif;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   margin-top: 2%;
+}
+
+.nav{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: #00DFC0;
+    font-size: 25px;
+}
+
+.firstSection{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.firstSectionMainText{
+    color:#2A454E;
+    font-size: 150px;
+    margin-top: 3%;
+    width: 85%;
+}
+
+.firstSectionMainText p:nth-child(2){
+    text-align: right;
+    width: 80%;
+}
+
+.firstSectionContent{
+    width: 100%;
+    display: grid;
+    grid: auto / 50% 50%;
+    position: relative;
+}
+
+.firstSectionMainContentText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstSectionMainContentP{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 70%;
+    width: 60%;
+}
+
+.firstSectionMainContentP p:first-child{
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 74px;
+    color: #2A454E;
+    width: 100%;
+}
+
+.firstSectionMainContentP p:nth-child(2){
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 74px;
+    color: #2A454E;
+    height: 30%;
+    text-align: right;
+    width: 100%;
+}
+
+.firstSectionMainContentText button{
+    width: 324px;
+    height: 69px;
+    background: #00A88F;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    font-family: 'Aclonica';
+    font-style: normal;
+    line-height: 45px;
+    color: #FFFFFF;
+    /* height: 0%; */
+}
+
+.btn-86 {
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    /* padding: 20px 60px; */
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background: #00a88f;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    border: none;
+}
+.btn-86 .fallback {
+    display: none;
+}
+.btn-86 .letters {
+    display: flex;
+}
+.btn-86 span {
+    position: relative;
+}
+.btn-86 span:nth-child(1), .btn-86 span:nth-child(7) , .btn-86 span:nth-child(9)
+,.btn-86 span:nth-child(14)
+{
+    --mov: 0;
+    --rot: 1;
+}
+.btn-86 span:nth-child(2), .btn-86 span:nth-child(6) , .btn-86 span:nth-child(8) {
+    --mov: 0.3333333333;
+    --rot: 0.6666666667;
+}
+.btn-86 span:nth-child(3), .btn-86 span:nth-child(5) , .btn-86 span:nth-child(4)
+,.btn-86 span:nth-child(4) {
+    --mov: 0.6666666667;
+    --rot: 0.3333333333;
+}
+.btn-86:hover span {
+    animation: dance 0.7s linear forwards 0.18s;
+}
+@keyframes dance {
+    30%, 36% {
+        transform: translateY(calc(-6px * var(--mov))) translateZ(0) rotate(calc(-13deg * var(--rot)));
+   }
+    50% {
+        transform: translateY(calc(3px * var(--mov))) translateZ(0) rotate(calc(6deg * var(--rot)));
+   }
+    70% {
+        transform: translateY(calc(-2px * var(--mov))) translateZ(0) rotate(calc(-3deg * var(--rot)));
+   }
+}
+.btn-86:before, .btn-86:after {
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+    will-change: transform;
+}
+.btn-86:hover:before, .btn-86:hover:after {
+    transform: translateY(-100%);
+}
+.btn-86:after {
+    transition-delay: 0.13s;
+    background: #fff;
+}
+.btn-86:hover {
+    background: #fff;
+    color: #00a88f;
+    border: 3px solid #00a88f;
+}
+
+.firstSectionImg{
+    width: 100%;
+    z-index: -10;
+}
+
+.coins{
+    position: absolute;
+    z-index: -20;
+    left: 0%;
+    top: 10%;
+    width: 35%;
+}
+
+.coin{
+    position: absolute;
+    z-index: -20;
+    right: 0%;
+    top: 1%;
+}
+
+
+.secondSection{
+    width: 100%;
+    display: grid;
+    grid: auto / 50% 50%;
+    position: relative;
+}
+
+.secondSectionImg{
+    width: 100%;
+    height: auto;
+}
+
+.secondSectionMainContent{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondSectionMainContent h1{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 74px;
+    color: #2A454E;
+    margin-bottom: 25px;
+    margin-top: 100px;
+}
+
+.secondSectionMainContent p{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    color: #00A88F;
+    margin-bottom: 100px;
+    width: 80%;
+}
+
+.secondSectionMainContent button{
+    width: 331px;
+    height: 74px;
+    background: #00A88F;
+    border-radius: 25px;
+    color: #fff;
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 40px;
+    border:none;
+    outline: none;
+}
+
+.coinSecondSection{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+}
+
+
+.formThirdSection{
+    width: 100%;
+    display: grid;
+    grid: auto / 50% 50%;
+}
+
+
+.thirdSectionImg{
+    width: 85%;
+    z-index: -10;
+}
+
+.expenses_box h1{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 102px;
+    color: #2A454E;
+    text-align: center;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+form label span{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 57px;
+    color: #2A454E;
+    padding-top: 20px;
+}
+
+form label:first-child{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+form label{
+    margin-bottom: 60px;
+    margin-left: 15%;
+}
+
+form button, form a{
+    margin-bottom: 30px;
+    margin-left: 15%;
+}
+
+.range{
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.range input{
+    background: #E1E1E1;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    width: 204px;
+    height: 50px;
+    padding-top:20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    color: #00A88F;
+    font-size: 15px;
+}
+
+.range:nth-child(2){
+    font-size: 60px;
+    color: #00A88F;
+}
+
+.range span{
+    padding-top: 10px;
+}
+
+
+  @import "compass/css3";
+  *, *:before, *:after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+ }
+  
+  .drop {
+    width: 30%;
+    height:50px;
+    font-family: pfs-bold;
+    color: #E1E1E1;
+    position: relative;
+    transition: width 0.5s;
+    will-change: width;
+    
+ }  
+  .drop .option {
+    width: 100%;
+    height: 60px;
+    border-radius:30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    cursor: pointer;
+    background-color: #E1E1E1;
+    color:#00A88F;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    margin-left: 25px;
+ }
+  .drop .option:not(.active) {
+      display: none;
+      opacity: 0;
+      transform: translateY(-50%);
+ }
+  .drop.visible {
+      animation: bounce 1s;
+      width: 24em;
+ }
+  .drop.visible:before, .drop.visible:after {
+      border-color: #fff;
+ }
+  .drop.visible:before {
+      opacity: 0;
+ }
+  .drop.visible:after {
+      opacity: 1;
+ }
+  .drop.visible .option {
+      color:#00A88F;
+      display: block;
+ }
+  .drop.opacity .option {
+      transform: translateZ(0);
+      opacity: 1;
+ }
+  .drop.opacity .option:nth-child(0) {
+      transition: opacity 0.5s 0s, transform 0.5s 0s;
+ }
+  .drop.opacity .option:nth-child(1) {
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+ }
+  
+  .drop.withBG .option {
+      transition: background-color 0.1s;
+ }
+  .drop.withBG .option:not(.placeholder):hover {
+      background-color: #00A88F;
+    color:#fff;
+ }
+  
+  .drop:after, .drop:before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 2%;
+      width: 0.75em;
+      height: 0.75em;
+      border: 0.2em solid #00A88F;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+      transition: opacity 0.2s;
+ }
+  .drop:before {
+      border-left: none;
+      border-top: none;
+      /* top: 1.2em; */
+ }
+  .drop:after {
+      border-right: none;
+      border-bottom: none;
+      opacity: 0;
+ }
+  .mini-hack {
+      opacity: 0;
+      transform: translateY(-50%);
+ }
+  
+ form label:nth-child(2){
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+
+form label:nth-child(3) input{
+     background-color: #E1E1E1;
+     margin-left: 25px;
+     outline: none;
+     border: none;
+     height: 50px;
+     width: 194px;
+     border-radius: 30px;
+     color: #00A88F;
+     font-size: 15px;
+     font-family: 'Aclonica';
+     font-style: normal;
+     font-weight: 400;
+     padding-left: 20px;
+}
+
+#search{
+    background-color: #00A88F;
+    width: 294px;
+    height: 64px;
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+
+
+form a{
+    color: #00A88F;
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.expenses{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 60px;
+    position: relative;
+    opacity: 100;
+}
+
+.active{
+    display: flex;
+}
+
+
+
+.expensesTitles{
+    display: grid;
+    width: 100%;
+    grid: auto / 25% 25% 25% 25%;
+    text-align: center;
+}
+
+.expensesTitles h2{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 40px;
+    color: #00A88F;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.expense__item_first_page,.expense__item_second_page,.expense__item_third_page,.expense__item_fourth_page,.expense__item_fifth_page{
+    display: none;
+    width: 100%;
+    grid: auto / 25% 25% 25% 25%;
+    text-align: center;
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #2A454E;
+    margin-bottom: 40px;
+}
+
+.expense__item_first_page{
+    display: grid;
+}
+
+
+.coinLeft{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -100;
+}
+
+.expensesButton{
+    width: 100%;
+    display: grid;
+    grid: auto / 50% 50%;
+    position: relative;
+}
+
+.btn-1Expenses {
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    /* padding: 20px 60px; */
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background: #00a88f;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    border: none;
+}
+.btn-1Expenses .fallback {
+    display: none;
+}
+.btn-1Expenses .letters {
+    display: flex;
+}
+.btn-1Expenses span {
+    position: relative;
+}
+.btn-1Expenses span:nth-child(1) , .btn-1Expenses span:nth-child(14)
+{
+    --mov: 0;
+    --rot: 1;
+}
+.btn-1Expenses span:nth-child(2), .btn-1Expenses span:nth-child(3) , .btn-1Expenses span:nth-child(4) ,.btn-1Expenses span:nth-child(5),.btn-1Expenses span:nth-child(9) ,.btn-1Expenses span:nth-child(10) ,.btn-1Expenses span:nth-child(11) ,.btn-1Expenses span:nth-child(12),.btn-1Expenses span:nth-child(13){
+    --mov: 0.3333333333;
+    --rot: 0.6666666667;
+}
+.btn-1Expenses span:nth-child(6), .btn-1Expenses span:nth-child(7) , .btn-1Expenses span:nth-child(8) {
+    --mov: 0.6666666667;
+    --rot: 0.3333333333;
+}
+.btn-1Expenses:hover span {
+    animation: dance 0.7s linear forwards 0.18s;
+}
+@keyframes dance {
+    30%, 36% {
+        transform: translateY(calc(-6px * var(--mov))) translateZ(0) rotate(calc(-13deg * var(--rot)));
+   }
+    50% {
+        transform: translateY(calc(3px * var(--mov))) translateZ(0) rotate(calc(6deg * var(--rot)));
+   }
+    70% {
+        transform: translateY(calc(-2px * var(--mov))) translateZ(0) rotate(calc(-3deg * var(--rot)));
+   }
+}
+.btn-1Expenses:before, .btn-86:after {
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+    will-change: transform;
+}
+.btn-1Expenses:hover:before, .btn-86:hover:after {
+    transform: translateY(-100%);
+}
+.btn-1Expenses:after {
+    transition-delay: 0.13s;
+    background: #fff;
+}
+.btn-1Expenses:hover {
+    background: #fff;
+    color: #00a88f;
+    border: 3px solid #00a88f;
+}
+
+.expensesButtonContent{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 170px;
+    position: relative;
+}
+
+.expensesButtonContent a{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    color: #FFFFFF;
+    width: 294px;
+    height: 64px;
+    background-color: #00A88F;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.expensesButtonContent p{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 74px;
+    color: #2A454E;
+    text-align: center;
+}
+
+.expensesButtonContent a:first-child{
+    margin-bottom: 10px;
+}
+
+.expensesButtonContent a:last-child{
+    position: absolute;
+    right: 10%;
+    top: 55%;
+    margin-top: 35px;
+}
+
+.coinExpensesButton{
+    position: absolute;
+    right: 0%;
+    top: 15%;
+   transform: rotate(180deg);
+   z-index: -10;
+}
+
+@import url('https://rsms.me/inter/inter-ui.css');
+
+.container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  color: #2A454E;
+  display: flex;
+  font-family: 'Aclonica';
+  font-size: 25px;
+  justify-content: center;
+  height: 100px;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.container span{
+    position: relative;
+}
+
+.index {
+  cursor: pointer;
+  display: inline;
+  margin-right: 30px;
+  padding: 5px;
+  user-select: none;
+  -moz-user-select: none;
+}
+.index:last-child {
+  margin: 0;
+}
+svg {
+  left: -12px;
+  position: absolute;
+  top: -11px;
+  transition: transform 500ms;
+  width: 46px;
+}
+path {
+  fill:none;
+  stroke:#00A88F;
+  stroke-dasharray: 150 150;
+  stroke-width:15;
+}
+.container.open:not(.flip) path {
+  animation: OpenRight 500ms;
+}
+.container.open.flip path {
+  animation: OpenLeft 500ms;
+}
+.container.i1 svg {
+  transform: translateX(0);
+}
+.container.i2 svg {
+  transform: translateX(55px);
+}
+.container.i3 svg {
+  transform: translateX(114px);
+}
+.container.i4 svg {
+  transform: translateX(172px);
+}
+.container.i5 svg {
+  transform: translateX(230px);
+}
+@keyframes OpenRight {
+  25% { stroke-dasharray: 100 150; }
+  60% { stroke-dasharray: 100 150; }
+  100% { stroke-dasharray: 150 150; }
+}
+@keyframes OpenLeft {
+  25% { stroke-dashoffset: -50px; }
+  60% { stroke-dashoffset: -50px; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.summary_box{
+    margin-top: 75px;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.active{
+    display: flex;
+}
+
+.summary_box h2{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 136px;
+    color: #2A454E;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.summary_box h3{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 57px;
+    color: #2A454E;
+    margin-bottom: 25px;
+}
+
+.summary_box span{
+    color: #00A88F;
+}
+
+.summary_box p{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+    color: #2A454E;
+    margin-bottom: 30px;
+}
+
+  
+.dropSummary {
+    width: 20%;
+    height:50px;
+    font-family: pfs-bold;
+    color: #E1E1E1;
+    position: relative;
+    transition: width 0.5s;
+    will-change: width;
+    margin-bottom: 10px;
+ }  
+  .dropSummary .option {
+    width: 100%;
+    height: 60px;
+    border-radius:30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    cursor: pointer;
+    background-color: #E1E1E1;
+    color:#00A88F;
+    font-size: 25px;
+    outline: none;
+    border: none;
+ }
+  .dropSummary .option:not(.active) {
+      display: none;
+      opacity: 0;
+      transform: translateY(-50%);
+ }
+  .dropSummary.visible {
+      animation: bounce 1s;
+      width: 24em;
+ }
+  .dropSummary.visible:before, .drop.visible:after {
+      border-color: #fff;
+ }
+  .dropSummary.visible:before {
+      opacity: 0;
+ }
+  .dropSummary.visible:after {
+      opacity: 1;
+ }
+  .dropSummary.visible .option {
+      color:#00A88F;
+      display: block;
+ }
+  .dropSummary.opacity .option {
+      transform: translateZ(0);
+      opacity: 1;
+ }
+  .dropSummary.opacity .option:nth-child(0) {
+      transition: opacity 0.5s 0s, transform 0.5s 0s;
+ }
+  .dropSummary.opacity .option:nth-child(1) {
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+ }
+  
+  .dropSummary.withBG .option {
+      transition: background-color 0.1s;
+ }
+  .dropSummary.withBG .option:not(.placeholder):hover {
+      background-color: #00A88F;
+    color:#fff;
+ }
+  
+  .dropSummary:after, .dropSummary:before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 15%;
+      width: 0.75em;
+      height: 0.75em;
+      border: 0.2em solid #00A88F;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+      transition: opacity 0.2s;
+ }
+  .dropSummary:before {
+      border-left: none;
+      border-top: none;
+      /* top: 1.2em; */
+ }
+  .dropSummary:after {
+      border-right: none;
+      border-bottom: none;
+      opacity: 0;
+ }
+
+ .expensesImg{
+    width: 100%;
+}
+
+ .summaryImg{
+    width: 40%;
+    margin-bottom: 100px;
+ }
+
+ .coinsSummaryLeft{
+    position: absolute;
+    left: 0%;
+    top: 5%;
+ }
+
+ .coinsSummaryRight{
+    position: absolute;
+    right:0%;
+    top: 10%;
+    transform: rotate(180deg);
+ }
+
+ .summary_box_period{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+ }
+
+ .summary_box_category{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+ }
+
+ .sum_category__itemFood{
+    display: none;
+ }
+
+ .sum_category__itemCar{
+    display: none;
+ }
+
+ .summary_box_period h3,.summary_box_category h3,.summary_box_category_and_period h3{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+    color: #2A454E;
+    margin-top: 70px;
+    text-align: center;
+ }
+
+ .sum_period__item_july,.sum_period__item_august,.sum_period__item_september,.sum_category__itemFood,.sum_category__itemCar{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #2A454E;
+    width: 30%;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .sum_period__item_no_results{
+    display: none;
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #2A454E;
+    width: 100%;
+    text-align: center;
+ }
+
+ .amount ,.currency{
+    color: #00A88F;
+ }
+
+ .summary_box_category_and_period{
+    display: none;
+ }
+
+ .sum_category_and_period_item{
+    width: 80%;
+    display: grid;
+    grid: auto/ 40% 60%;
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #2A454E;
+    text-align: center;
+    margin-bottom: 100px;
+ }
+
+ .sum_july,.sum_august{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .sum_july_food,.sum_july_car,.sum_august_food,.sum_august_car,.sum_sep_car,.sum_sep_food{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .imagesSummary{
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    flex-direction: row;
+ }
+
+ .summaryLeftBottom{
+    width: 40%;
+ }
+
+ .summaryRightBottom{
+    width: 40%;
+ }
+
+ .tipsSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .tipsSection h1{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 62px;
+    text-align: center;
+    color: #00A88F;
+    width: 35%;
+ }
+
+ .tipsMainContent{
+    width: 100%;
+    display: grid;
+    grid: auto  / 50% 50%;
+ }
+
+ .tipsImg{
+    width: 80%;
+ }
+
+ .tipsText{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .tipsText p{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+    text-align: center;
+    color: #2A454E;
+    margin-bottom: 100px;
+    width: 70%;
+ }
+
+ .tipsText button{
+    background: #00A88F;
+    border-radius: 25px;
+    width:331px;
+    height: 74px;
+    outline: none;
+    border: none;
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 40px;
+    color: #FFFFFF;
+ }
+
+ footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 280px;
+    background-color: #00A88F;
+ }
+
+ .firstDivFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px;
+ }
+ 
+ .firstDivFooter h1,h2{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    width: 120%;
+ }
+
+ .firstDivFooter h2{
+    text-align: right;
+ }
+
+ .firstDivFooter p{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+ }
+
+ .secondDivFooter{
+    font-family: 'Aclonica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    align-items: baseline;
+ }
+
+ .secondDivFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px;
+ }
+
+ 
+
+ @media (max-width: 768px) {
+
+    li a{
+        font-size: 15px;
+    }
+
+    .firstSectionMainText{
+        font-size: 90px;
+    }
+
+    .coin{
+        width: 20%;
+    }
+
+    .firstSectionMainContentP{
+        width: 80%;
+    }
+
+    .firstSectionMainContentP p:nth-child(1),.firstSectionMainContentP p:nth-child(2){
+        font-size: 40PX;
+    }
+
+    .firstSectionMainContentText button,.secondSectionMainContent button{
+        font-size: 25px;
+        width: 190px;
+        height: 49px;
+    }
+
+    .secondSectionMainContent h1{
+        font-size: 35px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .secondSectionMainContent p{
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .coinSecondSection{
+        width: 20%;
+    }
+    
+    .expenses_box h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    svg {
+        left: -10px;
+        top: -10px;
+        width: 36px;
+    }
+
+    .container.i1 svg {
+        transform: translateX(0);
+      }
+      .container.i2 svg {
+        transform: translateX(50px);
+      }
+      .container.i3 svg {
+        transform: translateX(100px);
+      }
+      .container.i4 svg {
+        transform: translateX(152px);
+      }
+      .container.i5 svg {
+        transform: translateX(202px);
+      }
+
+    form label span {
+        font-size: 20px;
+    }
+
+    .range input {
+        width: 110px;
+        height: 40px;
+        padding-left: 15px;
+        font-size: 10px;
+    }
+
+    .drop .option {
+        height: 40px;
+        padding-left: 15px;
+        padding-top: 10px;
+        font-size: 15px;
+    }
+
+    .drop {
+        height: 30px;
+    }
+
+    .drop:after, .drop:before {
+        top: 12px;
+        right: 0%;
+        width: 0.55em;
+        height: 0.55em;
+    }
+
+    form label:nth-child(3) input {
+        height: 40px;
+        width: 134px;
+        font-size: 12px;
+    }
+
+    #search{
+        width: 194px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    form a {
+        font-size: 15px;
+
+    }
+
+    .tipsSection h1 {
+        font-size: 30px;
+        line-height: 42px;
+        width: 60%;
+    }
+
+    .tipsText p {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 50px;
+        width: 70%;
+    }
+
+    .tipsText button {
+        width: 200px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .firstDivFooter h1, h2 {
+        font-size: 20px;
+    }
+
+    .firstDivFooter p {
+        font-size: 15px;
+    }
+
+    .secondDivFooter {
+        font-size: 20px;
+    }
+
+    footer{
+        height: 180px;
+    }
+
+   .coinLeft{
+    width: 20%;
+   }
+
+   .expensesTitles h2{
+    font-size: 25px;
+   }
+
+   .expense__item_first_page, .expense__item_second_page, .expense__item_third_page, .expense__item_fourth_page, .expense__item_fifth_page {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.container {
+    font-size: 15px;
+}
+
+.expensesImg{
+    width: 100%;
+}
+
+.expensesButtonContent a {
+    font-size: 20px;
+    width: 200px;
+    height: 55px;
+}
+
+.expensesButtonContent{
+    padding-top: 50px;
+}
+
+.expensesButtonContent p {
+    font-size: 40px;
+}
+
+.expensesButtonContent a:last-child {
+    margin-top: 5px;
+}
+
+.coinExpensesButton {
+   width: 18%;
+}
+
+.summary_box h2{
+    font-size: 65px;
+    line-height: 56px;
+}
+
+.summary_box h3{
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.summary_box p{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.coinsSummaryLeft,.coinsSummaryRight{
+    width: 25%;
+}
+
+.summaryImg{
+    margin-bottom: 50px;
+}
+
+.summary_box_period h3, .summary_box_category h3, .summary_box_category_and_period h3 {
+    margin-top: 50px; 
+    font-size: 25px;
+}
+
+.sum_period__item_no_results {
+    font-size: 20px;
+}
+
+.sum_period__item_july, .sum_period__item_august, .sum_period__item_september, .sum_category__itemFood, .sum_category__itemCar {
+    font-size: 20px;
+    width: 30%;
+    
+}
+.sum_category_and_period_item {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+
+    
+}
+      
+    </style>
+  </head>
+  <body>
+    <aside>
+      <nav>
+        <ul class="nav">
+          <li class="nav__item"><a href="#">Dashboard</a></li>
+          <li class="nav__item"><a href="#">Reports</a></li>
+          <li class="nav__item"><a href="#">Expenses</a></li>
+          <li class="nav__item"><a href="#">Settings</a></li>
+          <li class="nav__item"><a href="#">Profile</a></li>
+          <li class="nav__item"><a href="#">Log out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="firstSection">
+      <div class="firstSectionMainText">
+        <p>Expenses</p>
+         <p>& Reports</p>
+      </div>
+      <img src="./coin.png" alt="" class="coin">
+        <div class="firstSectionContent">
+          <div class="firstSectionMainContentText">
+            <div class="firstSectionMainContentP">
+              <p>Just</p>
+              <p>calculation!</p>
+            </div>
+            <button class="btn-86"> <div class="fallback">Try now</div>
+              <div class="letters" aria-hidden>
+                <span>T</span>
+                <span>r</span>
+                <span>y</span>
+                <span>&nbsp;</span>
+                <span>n</span>
+                <span>o</span>
+                <span>w</span>
+              </div></button>
+          </div>
+          <img src="./firstSection.jpg" alt="" class="firstSectionImg">
+          
+          <img src="./Coins.png" alt="" class="coins">
+        </div>
+    </section>
+
+    <section class="secondSection">
+      <img src="./secondSection.jpg" alt="" class="secondSectionImg">
+      <div class="secondSectionMainContent">
+        <h1>Tired of counting?</h1>
+        <p>No problem, enter the period you are interested in and see the expenses reports</p>
+        <button class="btn-86"> <div class="fallback">Calculate</div>
+          <div class="letters" aria-hidden>
+            <span>C</span>
+            <span>a</span>
+            <span>l</span>
+            <span>c</span>
+            <span>u</span>
+            <span>l</span>
+            <span>a</span>
+            <span>t</span>
+            <span>e</span>
+          </div></button>
+      </div>
+
+      <img src="./coin.png" alt="" class="coinSecondSection">
+
+    </section>
+
+    <section class="body" >
+      <section class="expenses_box" id="expenses_box">
+        <h1>Expenses</h1>
+
+        <div class="formThirdSection">
+          <form>
+            <label>
+              <span>Period</span>
+              <div class="range">
+                <input type="date" class="firstDate">
+                <span>-</span>
+                <input type="date" class="secondDate">
+              </div>
+            </label>
+            <label><span>Category</span>
+              <div class="drop" id="drop">
+                <div class="option active placeholder" data-value="choose" data-id="choose">
+                  Choose
+                </div>
+                <div class="option" id="first" data-value="food" data-id="food">
+                  food
+                </div>
+                <div class="option" data-value="car" data-id="car">
+                  car
+                </div>
+              </div>
+            </label>
+            <label><span>Name</span>
+              <input type="text">
+            </label>
+
+            <a href="#summary_box" class="btn-86 search" type="submit" id="search"> <div class="fallback">Search</div>
+              <div class="letters" aria-hidden>
+                <span>S</span>
+                <span>e</span>
+                <span>a</span>
+                <span>r</span>
+                <span>c</span>
+                <span>h</span>
+              </div></a>
+
+            <a href="#expenses" class="aWholeHistory">See whole history</a>
+          </form>
+
+          <img src="./thirdSection.jpg" alt="" class="thirdSectionImg">
+        </div>
+
+        <div class="expenses" id="expenses">
+          <img src="./coinLeft.jpg" alt="" class="coinLeft">
+          <h1>Whole history</h1>
+
+          <div class="container">
+            <span><div class="index">1</div><div class="index">2</div><div class="index">3</div><div class="index">4</div><div class="index">5</div>
+              <svg viewBox="0 0 100 100">
+                <path
+                      d="m 7.1428558,49.999998 c -1e-7,-23.669348 19.1877962,-42.8571447 42.8571442,-42.8571446 23.669347,0 42.857144,19.1877966 42.857144,42.8571446" />
+              </svg>
+              <svg viewBox="0 0 100 100">
+                <path
+                      d="m 7.1428558,49.999998 c -1e-7,23.669347 19.1877962,42.857144 42.8571442,42.857144 23.669347,0 42.857144,-19.187797 42.857144,-42.857144" />
+              </svg>
+            </span>
+            
+          </div>
+
+          <div class="expensesTitles">
+            <h2>Name</h2>
+            <h2>Price</h2>
+            <h2>Date</h2>
+            <h2>Category</h2>
+          </div>
+          <div class="expense__item_first_page">
+            <div class="name">coffee</div>
+            <div class="price"><span class="price__amount">40</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-07-16</div>
+          </div>
+          <div class="expense__item_first_page">
+            <div class="name">bread</div>
+            <div class="price"><span class="price__amount">8</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-08-01</div>
+          </div>
+          <div class="expense__item_first_page">
+            <div class="name">cheese</div>
+            <div class="price"><span class="price__amount">21</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-08-01</div>
+          </div>
+          <div class="expense__item_first_page">
+            <div class="name">fuel</div>
+            <div class="price"><span class="price__amount">320</span><span class="price__currency">PLN</span></div>
+            <div class="category">car</div>
+            <div class="date">2022-08-14</div>
+          </div>
+          <div class="expense__item_first_page">
+            <div class="name">bread</div>
+            <div class="price"><span class="price__amount">8</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-09-01</div>
+          </div>
+          <div class="expense__item_second_page">
+            <div class="name">ham</div>
+            <div class="price"><span class="price__amount">14</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-09-01</div>
+          </div>
+          <div class="expense__item_second_page">
+            <div class="name">butter</div>
+            <div class="price"><span class="price__amount">6</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-09-10</div>
+          </div>
+          <div class="expense__item_second_page">
+            <div class="name">fuel</div>
+            <div class="price"><span class="price__amount">320</span><span class="price__currency">PLN</span></div>
+            <div class="category">car</div>
+            <div class="date">2022-09-10</div>
+          </div>
+          <div class="expense__item_second_page">
+            <div class="name">car wash</div>
+            <div class="price"><span class="price__amount">60</span><span class="price__currency">PLN</span></div>
+            <div class="category">car</div>
+            <div class="date">2022-08-09</div>
+          </div>
+          <div class="expense__item_second_page">
+            <div class="name">pizza</div>
+            <div class="price"><span class="price__amount">65</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-08-09</div>
+          </div>
+          
+          <div class="expense__item_third_page">
+            <div class="name">fish</div>
+            <div class="price"><span class="price__amount">40</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-09-09</div>
+          </div>
+          <div class="expense__item_third_page">
+            <div class="name">potatoes</div>
+            <div class="price"><span class="price__amount">15</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-10-09</div>
+          </div>
+          <div class="expense__item_third_page">
+            <div class="name">car wash</div>
+            <div class="price"><span class="price__amount">60</span><span class="price__currency">PLN</span></div>
+            <div class="category">car</div>
+            <div class="date">2022-10-09</div>
+          </div>
+          <div class="expense__item_third_page">
+            <div class="name">fuel</div>
+            <div class="price"><span class="price__amount">250</span><span class="price__currency">PLN</span></div>
+            <div class="category">car</div>
+            <div class="date">2022-11-09</div>
+          </div>
+          <div class="expense__item_third_page">
+            <div class="name">cake</div>
+            <div class="price"><span class="price__amount">50</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-11-09</div>
+          </div>
+          <div class="expense__item_fourth_page">
+            <div class="name">bread</div>
+            <div class="price"><span class="price__amount">15</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-12-09</div>
+          </div>
+          <div class="expense__item_fourth_page">
+            <div class="name">chips</div>
+            <div class="price"><span class="price__amount">10</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-12-09</div>
+          </div>
+          <div class="expense__item_fourth_page">
+            <div class="name">cola</div>
+            <div class="price"><span class="price__amount">20</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-14-09</div>
+          </div>
+          <div class="expense__item_fourth_page">
+            <div class="name">fuel</div>
+            <div class="price"><span class="price__amount">260</span><span class="price__currency">PLN</span></div>
+            <div class="category">car</div>
+            <div class="date">2022-14-09</div>
+          </div>
+          <div class="expense__item_fourth_page">
+            <div class="name">car wash</div>
+            <div class="price"><span class="price__amount">60</span><span class="price__currency">PLN</span></div>
+            <div class="category">car</div>
+            <div class="date">2022-15-09</div>
+          </div>
+          <div class="expense__item_fifth_page">
+            <div class="name">milk</div>
+            <div class="price"><span class="price__amount">5</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-15-09</div>
+          </div>
+          <div class="expense__item_fifth_page">
+            <div class="name">coofee</div>
+            <div class="price"><span class="price__amount">10</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-30-09</div>
+          </div>
+          <div class="expense__item_fifth_page">
+            <div class="name">apple</div>
+            <div class="price"><span class="price__amount">2</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-30-09</div>
+          </div>
+          <div class="expense__item_fifth_page">
+            <div class="name">fuel</div>
+            <div class="price"><span class="price__amount">160</span><span class="price__currency">PLN</span></div>
+            <div class="category">car</div>
+            <div class="date">2022-01-10</div>
+          </div>
+          <div class="expense__item_fifth_page">
+            <div class="name">cheese</div>
+            <div class="price"><span class="price__amount">10</span><span class="price__currency">PLN</span></div>
+            <div class="category">food</div>
+            <div class="date">2022-19-10</div>
+          </div>
+
+
+          
+       
+
+          <div class="expensesButton">
+            <img src="./expenses.jpg" alt="" class="expensesImg">
+
+            <div class="expensesButtonContent">
+              <a href="#expenses_box" class="btn-1Expenses"> <div class="fallback">Set parameters</div>
+                <div class="letters" aria-hidden>
+                  <span>S</span>
+                  <span>e</span>
+                  <span>t</span>
+                  <span>&nbsp;</span>
+                  <span>p</span>
+                  <span>a</span>
+                  <span>r</span>
+                  <span>a</span>
+                  <span>m</span>
+                  <span>e</span>
+                  <span>t</span>
+                  <span>e</span>
+                  <span>r</span>
+                  <span>s</span>
+                </div></a>
+              <p>Or</p>
+              <a href="#expenses_box" class="btn-1Expenses hideExpenses"> <div class="fallback">Hide history</div>
+                <div class="letters" aria-hidden>
+                  <span>H</span>
+                  <span>i</span>
+                  <span>d</span>
+                  <span>e</span>
+                  <span>&nbsp;</span>
+                  <span>h</span>
+                  <span>i</span>
+                  <span>s</span>
+                  <span>t</span>
+                  <span>o</span>
+                  <span>r</span>
+                  <span>y</span>
+                </div></a>
+            </div>
+
+            <img src="./coinLeft.jpg" alt="" class="coinExpensesButton">
+          </div>
+          
+        </div>
+      </section>
+      <section class="summary_box" id="summary_box">
+        
+        <h2>Summary</h2>
+        <h3>Total: <span>797 PLN</span></h3>
+        <p>Choose filter</p>
+        <div class="dropSummary">
+          <div class="option active placeholder" data-value="placeholder" data-id="choose">
+            choose
+          </div>
+          <div class="option" data-value="period" data-id="period">
+            period
+          </div>
+          <div class="option" data-value="category" data-id="category">
+            category
+          </div>
+          <div class="option" data-value="period&category" data-id="period&category">
+            period&category
+          </div>
+        </div>
+
+        <img src="./summary.png" alt="" class="summaryImg">
+
+        <img src="./coinsSummary.png" alt="" class="coinsSummaryLeft">
+        <img src="./coinsSummary.png" alt="" class="coinsSummaryRight">
+
+        <section class="summary_box_period">
+          <h3>Your expenses per period:</h3>
+          <div class="sum_period__item_july">
+            <div class="date">2022-07</div>
+            <div class="amount">40</div>
+            <div class="currency">PLN</div>
+          </div>
+          <div class="sum_period__item_august">
+            <div class="date">2022-08</div>
+            <div class="amount">349</div>
+            <div class="currency">PLN</div>
+          </div>
+          <div class="sum_period__item_september">
+            <div class="date">2022-09</div>
+            <div class="amount">408</div>
+            <div class="currency">PLN</div>
+          </div> 
+          <div class="sum_period__item_no_results">
+            <div>No results found</div>
+          </div> 
+
+        </section> 
+        <section class="summary_box_category">
+          <h3>Your expenses per category</h3>
+          <div class="sum_category__itemFood">
+            <div class="date">food</div>
+            <div class="amount">97</div>
+            <div class="currency">PLN</div>
+          </div>
+          <div class="sum_category__itemCar">
+            <div class="date car" >car</div>
+            <div class="amount">700</div>
+            <div class="currency">PLN</div>
+          </div>
+        </section>
+
+        <section class="summary_box_category_and_period">
+          <h3>Your expenses per period and  per category</h3>
+          <div class="sum_category_and_period_item">
+            <div class="date">2022-07</div>
+            <div class="sum_july">
+              <div class="sum_july_food">
+                <div class="category">food</div>
+                <div class="amount">10</div>
+                <div class="currency">PLN</div>
+              </div>
+              <div class="sum_july_car">
+                <div class="category">car</div>
+                <div class="amount">30</div>
+                <div class="currency">PLN</div>
+              </div>
+            </div>
+          </div>
+          <div class="sum_category_and_period_item">
+            <div class="date">2022-08</div>
+            <div class="sum_august">
+              <div class="sum_august_food">
+                <div class="category">food</div>
+                <div class="amount">149</div>
+                <div class="currency">PLN</div>
+              </div>
+              <div class="sum_august_car">
+                <div class="category">car</div>
+                <div class="amount">200</div>
+                <div class="currency">PLN</div>
+              </div>
+              </div>
+          </div>
+          <div class="sum_category_and_period_item">
+            <div class="date">2022-09</div>
+            <div class="sum_sep">
+              <div class="sum_sep_food">
+                <div class="category">food</div>
+                <div class="amount">200</div>
+                <div class="currency">PLN</div>
+              </div>
+              <div class="sum_sep_car">
+                <div class="category">car</div>
+                <div class="amount">208</div>
+                <div class="currency">PLN</div>
+              </div>
+              </div>
+          </div>
+        </section>
+
+        <div class="imagesSummary">
+          <img src="./summaryLeftBottom.jpg" alt="" class="summaryLeftBottom">
+          <img src="./summaryRightBottom.jpg" alt="" class="summaryRightBottom">
+        </div>
+      </section>
+
+      <section class="tipsSection">
+        <h1>Are you dissatisfied with your expenses?</h1>
+        <div class="tipsMainContent">
+          <img src="./tips.png" alt="" class="tipsImg">
+          <div class="tipsText">
+            <p>Read useful tips from us on how to spend less</p>
+            <button class="btn-86"> <div class="fallback">Raed now</div>
+              <div class="letters" aria-hidden>
+                <span>R</span>
+                <span>e</span>
+                <span>a</span>
+                <span>d</span>
+                <span>&nbsp;</span>
+                <span>n</span>
+                <span>o</span>
+                <span>w</span>
+              </div></button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <div class="firstDivFooter">
+        <div>
+          <h1>Expenses</h1>
+          <h2>& Reports</h2> 
+        </div>
+          <p>2022</p>
+      </div>
+      <div class="secondDivFooter">
+        <p>Cooperation</p>
+        <p>Contact</p>
+        <p>About us </p>
+      </div>
+    </footer>
+    <!-- <section class="tasks">
+      <h2>TASKS</h2><code>
+        <pre>BASIC (HTML/CSS)
+1. Create UI matching design with https://www.parleto.io (feel free to make changes in names, structure etc.)
+2. Use material design (https://material.io/) but override essentials colors etc.
+3. UI should be responsive with one breakpoint - below 768px of minimum width
+4. Add some additional information that you think will be usefull for user
+ADDITIONAL (JS) - not required
+1. Add pagination (5 per page)
+2. Add filtering (period range, category, name)</pre></code>
+    </section> -->
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+    </script>
+
+    <script>
+          $(document).ready(function() {
+        $(".drop .option").click(function() {
+          var val = $(this).attr("data-value"),
+              $drop = $(".drop"),
+              prevActive = $(".drop .option.active").attr("data-value"),
+              options = $(".drop .option").length;
+          $drop.find(".option.active").addClass("mini-hack");
+          $drop.toggleClass("visible");
+          $drop.removeClass("withBG");
+          $(this).css("top");
+          $drop.toggleClass("opacity");
+          $(".mini-hack").removeClass("mini-hack");
+          if ($drop.hasClass("visible")) {
+            setTimeout(function() {
+              $drop.addClass("withBG");
+            }, 400 + options*100); 
+          }
+          triggerAnimation();
+          if (val !== "placeholder" || prevActive === "placeholder") {
+            $(".drop .option").removeClass("active");
+            $(this).addClass("active");
+          };
+
+          var content=$(".drop .option.active").attr("data-id");
+
+          var dateFood=document.querySelector(".sum_category__itemFood");
+          var dateCar=document.querySelector(".sum_category__itemCar");
+          var summary_box_category=document.querySelector('.summary_box_category');
+          var imagesSummary=document.querySelector('.imagesSummary');
+
+          if(content === 'food'){
+            summary_box_category.style.display="flex";
+            dateFood.style.display="flex";
+            imagesSummary.style.display="flex";
+          }
+          else{
+            dateFood.style.display="none";
+          }
+
+          if(content === 'car'){
+            summary_box_category.style.display="flex";
+            dateCar.style.display="flex";
+            imagesSummary.style.display="flex";
+          }
+          else{
+            dateCar.style.display="none";
+          }
+
+        
+
+        });
+
+
+        const mediaQuerySmall = window.matchMedia('(max-width: 768px)')
+
+        if (mediaQuerySmall.matches) {
+          function triggerAnimation() {
+          var finalWidth = $(".drop").hasClass("visible") ? 130 : 100;
+          $(".drop").css("width", "150px");
+          setTimeout(function() {
+            $(".drop").css("width", finalWidth + "px");
+          }, 400);
+        }
+        }
+
+        const mediaQueryMedium = window.matchMedia('(min-width: 768px)')
+
+
+        if (mediaQueryMedium.matches) {
+        function triggerAnimation() {
+          var finalWidth = $(".drop").hasClass("visible") ? 170 : 150;
+          $(".drop").css("width", "150px");
+          setTimeout(function() {
+            $(".drop").css("width", finalWidth + "px");
+          }, 400);
+        }
+      }
+       
+      });
+
+
+      $(document).ready(function() {
+        $(".dropSummary .option").click(function() {
+          var val = $(this).attr("data-value"),
+              $drop = $(".dropSummary"),
+              prevActive = $(".dropSummary .option.active").attr("data-value"),
+              
+              options = $(".dropSummary .option").length;
+          $drop.find(".option.active").addClass("mini-hack");
+          $drop.toggleClass("visible");
+          $drop.removeClass("withBG");
+          $(this).css("top");
+          $drop.toggleClass("opacity");
+          $(".mini-hack").removeClass("mini-hack");
+          if ($drop.hasClass("visible")) {
+            setTimeout(function() {
+              $drop.addClass("withBG");
+            }, 400 + options*100); 
+          }
+          triggerAnimation();
+          if (val !== "placeholder" || prevActive === "placeholder") {
+            $(".dropSummary .option").removeClass("active");
+            $(this).addClass("active");
+          };
+
+          var content=$(".dropSummary .option.active").attr("data-id");
+          var summary_box_period=document.querySelector('.summary_box_period');
+          var summary_box_category=document.querySelector('.summary_box_category');
+          var summaryImg=document.querySelector('.summaryImg');
+          var dateFood=document.querySelector(".sum_category__itemFood");
+          var dateCar=document.querySelector(".sum_category__itemCar");
+          var summary_box_category_and_period=document.querySelector('.summary_box_category_and_period');
+          var sum_period__item_july=document.querySelector(".sum_period__item_july");
+          var sum_period__item_august=document.querySelector(".sum_period__item_august");
+          var sum_period__item_september=document.querySelector(".sum_period__item_september");
+          var sum_period__item_no_results=document.querySelector(".sum_period__item_no_results");
+
+          console.log(content)
+
+          if(content === 'period'){
+            summary_box_period.style.display="flex";
+            sum_period__item_july.style.display="flex";
+            sum_period__item_august.style.display="flex";
+            sum_period__item_september.style.display="flex";
+            sum_period__item_no_results.style.display="none";
+            summaryImg.style.display="none";
+          }
+          else{
+            summary_box_period.style.display="none";
+          }
+
+          if(content === 'category'){
+            summary_box_category.style.display="flex";
+            summaryImg.style.display="none";
+            dateFood.style.display="flex";
+            dateCar.style.display="flex";
+          }
+          else{
+            summary_box_category.style.display="none";
+          }
+
+          if(content === 'period&category'){
+            summary_box_category_and_period.style.display="block";
+            summaryImg.style.display="none";
+          }
+          else{
+            summary_box_category_and_period.style.display="none";
+          }
+
+        });
+
+        function triggerAnimation() {
+          var finalWidth = $(".dropSummary").hasClass("visible") ? 250 : 280;
+          $(".dropSummary").css("width", "300px");
+          setTimeout(function() {
+            $(".dropSummary").css("width", finalWidth + "px");
+          }, 400);
+
+          
+        }
+      });
+
+
+      const c = document.querySelector('.container')
+      const indexs = Array.from(document.querySelectorAll('.index'))
+      let cur = -1
+      indexs.forEach((index, i) => {
+        index.addEventListener('click', (e) => {
+          // clear
+          c.className = 'container'
+          void c.offsetWidth; // Reflow
+          c.classList.add('open')
+          c.classList.add(`i${i + 1}`)
+          if (cur > i) {
+            c.classList.add('flip')
+          }
+          cur = i
+          var expense__item_first_page=document.querySelectorAll('.expense__item_first_page');
+          var expense__item_second_page=document.querySelectorAll('.expense__item_second_page');
+          var expense__item_third_page=document.querySelectorAll('.expense__item_third_page');
+          var expense__item_fourth_page=document.querySelectorAll('.expense__item_fourth_page');
+          var expense__item_fifth_page=document.querySelectorAll('.expense__item_fifth_page');
+
+
+          switch (i+1) {
+            case 1:
+              expense__item_first_page.forEach(b=>b.style.display="grid")
+              expense__item_second_page.forEach(b=>b.style.display="none")
+              expense__item_third_page.forEach(b=>b.style.display="none")
+              expense__item_fourth_page.forEach(b=>b.style.display="none")
+              expense__item_fifth_page.forEach(b=>b.style.display="none")
+              break
+            case 2:
+              expense__item_first_page.forEach(b=>b.style.display="none")
+              expense__item_third_page.forEach(b=>b.style.display="none")
+              expense__item_fourth_page.forEach(b=>b.style.display="none")
+              expense__item_fifth_page.forEach(b=>b.style.display="none")
+              expense__item_second_page.forEach(b=>b.style.display="grid")
+              break
+            case 3:
+              expense__item_first_page.forEach(b=>b.style.display="none")
+              expense__item_second_page.forEach(b=>b.style.display="none")
+              expense__item_fourth_page.forEach(b=>b.style.display="none")
+              expense__item_fifth_page.forEach(b=>b.style.display="none")
+              expense__item_third_page.forEach(b=>b.style.display="grid")
+              break
+            case 4:
+              expense__item_first_page.forEach(b=>b.style.display="none")
+              expense__item_second_page.forEach(b=>b.style.display="none")
+              expense__item_third_page.forEach(b=>b.style.display="none")
+              expense__item_fifth_page.forEach(b=>b.style.display="none")
+              expense__item_fourth_page.forEach(b=>b.style.display="grid")
+              break
+            case 5:
+              expense__item_first_page.forEach(b=>b.style.display="none")
+              expense__item_second_page.forEach(b=>b.style.display="none")
+              expense__item_third_page.forEach(b=>b.style.display="none")
+              expense__item_fourth_page.forEach(b=>b.style.display="none")
+              expense__item_fifth_page.forEach(b=>b.style.display="grid")
+              break
+            default:
+              console.log('none')
+          }
+
+
+        })
+      })
+
+      const wholeHistory = document.querySelector('.aWholeHistory')
+      const expenses = document.querySelector('.expenses')
+      const hideExpenses = document.querySelector('.hideExpenses')
+      const searchButton = document.querySelector('.search')
+      const summary=document.querySelector('.summary_box')
+
+      function showExpenses(){
+        expenses.classList.toggle('active');
+      }
+
+      function hide(){
+        expenses.classList.toggle('active');
+      }
+
+      function fadeIn(el, speed) {
+        var step = 1 / speed;
+        var interval = setInterval(function() {
+        if (+el.style.opacity >= 1)
+            clearInterval(interval);
+      
+          el.style.opacity = +expenses.style.opacity + step;
+        }, speed / 1000);
+      }
+
+      wholeHistory.addEventListener('click', function(event) {
+      fadeIn(expenses, 300);
+      });
+
+      wholeHistory.addEventListener('click',showExpenses);
+
+
+      expenses.style.opacity = 0
+      hideExpenses.addEventListener('transitionend', () => {
+      expenses.hidden = true
+      }, {once: true})
+
+      
+
+      $(document).ready(function(){
+      $(".hideExpenses").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+    setTimeout(hideExpenses, 3000);
+
+    hideExpenses.addEventListener('click',hide);
+
+    
+    function showSummary(){
+      summary.classList.toggle('active');
+    }
+
+    searchButton.addEventListener('click',showSummary);
+    searchButton.addEventListener('click',()=>{  
+        var sum_period__item_july=document.querySelector(".sum_period__item_july");
+        var sum_period__item_august=document.querySelector(".sum_period__item_august");
+        var sum_period__item_september=document.querySelector(".sum_period__item_september");
+        var sum_period__item_no_results=document.querySelector(".sum_period__item_no_results");
+        var summary_box_period=document.querySelector(".summary_box_period");
+        var imagesSummary=document.querySelector('.imagesSummary');
+
+        
+        var date = new Date($('.firstDate').val());
+        var month = date.getMonth() + 1;
+        if(month === 7){
+          sum_period__item_no_results.style.display="none";
+          sum_period__item_july.style.display="flex";
+          sum_period__item_august.style.display="none";
+          sum_period__item_september.style.display="none";
+          summary_box_period.style.display="flex";
+          imagesSummary.style.display="flex";
+          console.log("7")
+        }
+        else if(month === 8){
+          sum_period__item_no_results.style.display="none";
+          sum_period__item_july.style.display="none";
+          sum_period__item_september.style.display="none";
+          sum_period__item_august.style.display="flex";
+          summary_box_period.style.display="flex";
+          imagesSummary.style.display="flex";
+        }
+        else if(month === 9){
+          sum_period__item_no_results.style.display="none";
+          sum_period__item_july.style.display="none";
+          sum_period__item_august.style.display="none";
+          sum_period__item_september.style.display="flex";
+          summary_box_period.style.display="flex";
+          imagesSummary.style.display="flex";
+        }
+        else{
+          sum_period__item_july.style.display="none";
+          sum_period__item_august.style.display="none";
+          sum_period__item_september.style.display="none";
+          sum_period__item_no_results.style.display="block";
+          summary_box_period.style.display="flex";
+          imagesSummary.style.display="flex";
+        }
+
+        var date = new Date($('.secondDate').val());
+        var monthSecond = date.getMonth() + 1;
+        if(monthSecond === 7){
+          sum_period__item_july.style.display="flex";
+          summary_box_period.style.display="flex";
+          imagesSummary.style.display="flex";
+          console.log("7")
+        }
+        else if(monthSecond === 8){
+          sum_period__item_august.style.display="flex";
+          summary_box_period.style.display="flex";
+          imagesSummary.style.display="flex";
+        }
+        else if(monthSecond === 9){
+          sum_period__item_september.style.display="flex";
+          summary_box_period.style.display="flex";
+          imagesSummary.style.display="flex";
+        }
+        else{
+          sum_period__item_no_results.style.display="block";
+          summary_box_period.style.display="flex";
+          imagesSummary.style.display="flex";
+        }
+
+    })
+
+
+
+});
+
+  
+      
+    </script> 
+
+  </body>
+</html>
